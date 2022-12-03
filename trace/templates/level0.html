@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home-Page</title>
+</head>
+<style>
+    html,
+body {
+    height: 100%;
+    overflow: hidden;
+  
+}
+.glow-on-hover2 {
+    width: 110px;
+    height: 25px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+
+
+.glow-on-hover2:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover2:active {
+    color: #000
+}
+
+.glow-on-hover2:active:after {
+    background: transparent;
+}
+
+.glow-on-hover2:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover2:after {
+    z-index: -1;
+    position: relative;
+    top:50px;
+    left:50px;
+    background: #111;
+    right: 20px;
+    border-radius: 10px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    position: relative;
+    top:50px;
+    left:50px;
+    background: #111;
+    right: 20px;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.heading{
+    font: size 500px;
+    color:black;
+
+
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
+
+h1,
+p,
+a{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+
+h1 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+.header {
+    position:absolute;
+    background-image: url("https://encryptedmasterchat.pythonanywhere.com/static/new.jpg");
+    width: 100%;
+  padding:50px 0;
+  text-align: center;
+ 
+  top:0px;
+  left:0px;
+}
+.new{
+    
+    position: relative;
+    overflow-y: scroll;
+    height:600px;
+    width:400px;
+    scrollbar-width:none;
+
+
+}
+
+
+.btn-bgstroke {
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 300;
+  margin-top: 30px; 
+}
+
+.btn-bgstroke:hover {
+  background-color: white;
+  color: #ff7300;
+}
+</style>
+<script>
+    
+    function P(){
+        window.location="level0.html"
+    }
+</script>
+<body scroll="no">
+    <section class="header">
+        <h1 style="color: white;">TRACE-TREASURE HUNT</h1>
+        <p style="color: white;">Hunt The Treasure To Make It Yours!</p>
+    </section>
+    <div style="position:absolute;color:black;top:20%;height:200px">
+        <p>
+
+        </p>
+    </div>
+    
+    <section class="new" style="position:absolute;top:200px;left:0">
+        <br><h><b><u style="position:absolute;color:black;left:80px">PLAYERS</b></u></h><br>
+        <h><b style="position:absolute;color:black;left:5px">TEAM</b></h>        <h><b style="position:relative;color:black;left:100px;">CURERNT_LEVEL</b></h>
+        <p style="position:relative;color:black;left:5px">TEAM1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  6</p>         
+               
+    
+    </section>
+    <div id="update">
+        <p style="position:absolute;color:black;font: 200;font-size: 50px;top:200px;left:550px"><b><u>LEVEL <b style="color:green"">0</b></u></b></p>
+        <p style="position:absolute;color:black;font: 200;font-size: 30px;top:300px;left:500px"><b>This is a question?</b></p>
+        <form method="post" action="/">
+            <input style="position:absolute;background-color:white;font: 200;font-size: 30px;top:420px;left:500px;">
+            <br> <br> <br> <br> <br><br>
+            <p style="position: absolute;color:red;top:470px;left:530px;">{{Haha Answer is wrong!}}</p>
+            <button style="position: absolute;left:600px;top:550px"class="glow-on-hover" type="button">SUBMIT ANSWER</button>
+        </form>
+        <button class="glow-on-hover2" style="position:absolute;background-color:black;font: 200;font-size: 15px;top:370px;left:800px;" class="button" onClick="window.open('http://www.google.com');">View File</button>
+    </div>
+
+</body>
+</html> 
